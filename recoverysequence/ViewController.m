@@ -1,6 +1,7 @@
 
 #import "ViewController.h"
 #import "OGLWrapperView.h"
+#import "RSOSCListener.h"
 
 // this stub is needed to silence the system sound when keys are pressed.
 @interface SilentView : NSView
@@ -11,6 +12,12 @@
 
 - (BOOL)acceptsFirstResponder { return YES; }
 - (void)keyDown:(NSEvent *)event {}
+
+@end
+
+@interface ViewController ()
+
+@property (nonatomic, strong) RSOSCListener *oscListener;
 
 @end
 
@@ -37,6 +44,9 @@
     [self keyDown:e];
     return e;
   }];
+  
+  _oscListener = [[RSOSCListener alloc] initWithPort:4242];
+  [_oscListener start];
 }
 
 - (void)keyDown:(NSEvent *)event

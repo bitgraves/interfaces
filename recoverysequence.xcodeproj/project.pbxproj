@@ -14,6 +14,7 @@
 		B5CF7B471F5F999800F8AEBC /* OGLWrapperView.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5CF7B461F5F999800F8AEBC /* OGLWrapperView.mm */; };
 		B5CF7B4A1F5FA4D800F8AEBC /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CF7B491F5FA4D800F8AEBC /* CoreVideo.framework */; };
 		B5CF7B4F1F5FAA5600F8AEBC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CF7B4D1F5FAA5600F8AEBC /* main.m */; };
+		B5CF7B531F5FBD0D00F8AEBC /* RSOSCListener.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CF7B521F5FBD0D00F8AEBC /* RSOSCListener.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		B5CF7B491F5FA4D800F8AEBC /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		B5CF7B4C1F5FAA5600F8AEBC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5CF7B4D1F5FAA5600F8AEBC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B5CF7B511F5FBD0D00F8AEBC /* RSOSCListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSOSCListener.h; sourceTree = "<group>"; };
+		B5CF7B521F5FBD0D00F8AEBC /* RSOSCListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSOSCListener.m; sourceTree = "<group>"; };
 		C58292F68C9D49B0C65C5B4B /* Pods-recoverysequence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-recoverysequence.debug.xcconfig"; path = "Pods/Target Support Files/Pods-recoverysequence/Pods-recoverysequence.debug.xcconfig"; sourceTree = "<group>"; };
 		CA321180E1BE5DDD454A605C /* Pods-recoverysequence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-recoverysequence.release.xcconfig"; path = "Pods/Target Support Files/Pods-recoverysequence/Pods-recoverysequence.release.xcconfig"; sourceTree = "<group>"; };
 		D4476CBB6F43F4243D01989D /* libPods-recoverysequence.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-recoverysequence.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -85,6 +88,7 @@
 				B5CF7B371F5F98C000F8AEBC /* ViewController.h */,
 				B5CF7B381F5F98C000F8AEBC /* ViewController.m */,
 				B5CF7B3A1F5F98C000F8AEBC /* Assets.xcassets */,
+				B5CF7B501F5FBCCB00F8AEBC /* osc */,
 				B5CF7B4B1F5FAA5600F8AEBC /* Supporting */,
 			);
 			path = recoverysequence;
@@ -106,6 +110,15 @@
 				B5CF7B4D1F5FAA5600F8AEBC /* main.m */,
 			);
 			path = Supporting;
+			sourceTree = "<group>";
+		};
+		B5CF7B501F5FBCCB00F8AEBC /* osc */ = {
+			isa = PBXGroup;
+			children = (
+				B5CF7B511F5FBD0D00F8AEBC /* RSOSCListener.h */,
+				B5CF7B521F5FBD0D00F8AEBC /* RSOSCListener.m */,
+			);
+			path = osc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +245,7 @@
 				B5CF7B471F5F999800F8AEBC /* OGLWrapperView.mm in Sources */,
 				B5CF7B4F1F5FAA5600F8AEBC /* main.m in Sources */,
 				B5CF7B331F5F98C000F8AEBC /* AppDelegate.m in Sources */,
+				B5CF7B531F5FBD0D00F8AEBC /* RSOSCListener.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
