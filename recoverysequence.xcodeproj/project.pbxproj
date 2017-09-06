@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B2F8A6DE378A734E10856C1 /* libPods-recoverysequence.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4476CBB6F43F4243D01989D /* libPods-recoverysequence.a */; };
 		B5CF7B331F5F98C000F8AEBC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CF7B321F5F98C000F8AEBC /* AppDelegate.m */; };
 		B5CF7B391F5F98C000F8AEBC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CF7B381F5F98C000F8AEBC /* ViewController.m */; };
 		B5CF7B3B1F5F98C000F8AEBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5CF7B3A1F5F98C000F8AEBC /* Assets.xcassets */; };
@@ -16,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B5CF7B2E1F5F98C000F8AEBC /* recoverysequence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "recoverysequence.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5CF7B2E1F5F98C000F8AEBC /* recoverysequence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = recoverysequence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CF7B311F5F98C000F8AEBC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B5CF7B321F5F98C000F8AEBC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B5CF7B371F5F98C000F8AEBC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -27,6 +28,9 @@
 		B5CF7B491F5FA4D800F8AEBC /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		B5CF7B4C1F5FAA5600F8AEBC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5CF7B4D1F5FAA5600F8AEBC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C58292F68C9D49B0C65C5B4B /* Pods-recoverysequence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-recoverysequence.debug.xcconfig"; path = "Pods/Target Support Files/Pods-recoverysequence/Pods-recoverysequence.debug.xcconfig"; sourceTree = "<group>"; };
+		CA321180E1BE5DDD454A605C /* Pods-recoverysequence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-recoverysequence.release.xcconfig"; path = "Pods/Target Support Files/Pods-recoverysequence/Pods-recoverysequence.release.xcconfig"; sourceTree = "<group>"; };
+		D4476CBB6F43F4243D01989D /* libPods-recoverysequence.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-recoverysequence.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,18 +39,29 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5CF7B4A1F5FA4D800F8AEBC /* CoreVideo.framework in Frameworks */,
+				0B2F8A6DE378A734E10856C1 /* libPods-recoverysequence.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F4DBD639BCB9B70608A43F5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C58292F68C9D49B0C65C5B4B /* Pods-recoverysequence.debug.xcconfig */,
+				CA321180E1BE5DDD454A605C /* Pods-recoverysequence.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		B5CF7B251F5F98C000F8AEBC = {
 			isa = PBXGroup;
 			children = (
 				B5CF7B301F5F98C000F8AEBC /* recoverysequence */,
 				B5CF7B2F1F5F98C000F8AEBC /* Products */,
 				B5CF7B481F5FA4D800F8AEBC /* Frameworks */,
+				7F4DBD639BCB9B70608A43F5 /* Pods */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -72,13 +87,14 @@
 				B5CF7B3A1F5F98C000F8AEBC /* Assets.xcassets */,
 				B5CF7B4B1F5FAA5600F8AEBC /* Supporting */,
 			);
-			path = "recoverysequence";
+			path = recoverysequence;
 			sourceTree = "<group>";
 		};
 		B5CF7B481F5FA4D800F8AEBC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				B5CF7B491F5FA4D800F8AEBC /* CoreVideo.framework */,
+				D4476CBB6F43F4243D01989D /* libPods-recoverysequence.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -99,16 +115,19 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B5CF7B421F5F98C000F8AEBC /* Build configuration list for PBXNativeTarget "recoverysequence" */;
 			buildPhases = (
+				B951E130D4F253FC60285425 /* [CP] Check Pods Manifest.lock */,
 				B5CF7B2A1F5F98C000F8AEBC /* Sources */,
 				B5CF7B2B1F5F98C000F8AEBC /* Frameworks */,
 				B5CF7B2C1F5F98C000F8AEBC /* Resources */,
+				8F8B3B43AEA86E61A5CC8D41 /* [CP] Embed Pods Frameworks */,
+				493C3C2D93104B7FEE66671F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "recoverysequence";
-			productName = "recoverysequence";
+			name = recoverysequence;
+			productName = recoverysequence;
 			productReference = B5CF7B2E1F5F98C000F8AEBC /* recoverysequence.app */;
 			productType = "com.apple.product-type.application";
 		};
@@ -155,6 +174,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		493C3C2D93104B7FEE66671F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-recoverysequence/Pods-recoverysequence-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F8B3B43AEA86E61A5CC8D41 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-recoverysequence/Pods-recoverysequence-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B951E130D4F253FC60285425 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B5CF7B2A1F5F98C000F8AEBC /* Sources */ = {
@@ -262,26 +329,28 @@
 		};
 		B5CF7B431F5F98C000F8AEBC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C58292F68C9D49B0C65C5B4B /* Pods-recoverysequence.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5HCSNU2K62;
 				INFOPLIST_FILE = "$(SRCROOT)/recoverysequence/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.terribleben.recoverysequence";
+				PRODUCT_BUNDLE_IDENTIFIER = com.terribleben.recoverysequence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		B5CF7B441F5F98C000F8AEBC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA321180E1BE5DDD454A605C /* Pods-recoverysequence.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = 5HCSNU2K62;
 				INFOPLIST_FILE = "$(SRCROOT)/recoverysequence/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.terribleben.recoverysequence";
+				PRODUCT_BUNDLE_IDENTIFIER = com.terribleben.recoverysequence;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
