@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		0B2F8A6DE378A734E10856C1 /* libPods-recoverysequence.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4476CBB6F43F4243D01989D /* libPods-recoverysequence.a */; };
+		B59B594E1F64451F0083850D /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B59B594C1F64451F0083850D /* Renderer.cpp */; };
+		B59B59521F64455A0083850D /* AkaiMPD218Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B59B59501F64455A0083850D /* AkaiMPD218Model.cpp */; };
 		B5CF7B331F5F98C000F8AEBC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CF7B321F5F98C000F8AEBC /* AppDelegate.m */; };
-		B5CF7B391F5F98C000F8AEBC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CF7B381F5F98C000F8AEBC /* ViewController.m */; };
+		B5CF7B391F5F98C000F8AEBC /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5CF7B381F5F98C000F8AEBC /* ViewController.mm */; };
 		B5CF7B3B1F5F98C000F8AEBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5CF7B3A1F5F98C000F8AEBC /* Assets.xcassets */; };
 		B5CF7B471F5F999800F8AEBC /* OGLWrapperView.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5CF7B461F5F999800F8AEBC /* OGLWrapperView.mm */; };
 		B5CF7B4A1F5FA4D800F8AEBC /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5CF7B491F5FA4D800F8AEBC /* CoreVideo.framework */; };
@@ -18,11 +20,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B59B594C1F64451F0083850D /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
+		B59B594D1F64451F0083850D /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		B59B59501F64455A0083850D /* AkaiMPD218Model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AkaiMPD218Model.cpp; sourceTree = "<group>"; };
+		B59B59511F64455A0083850D /* AkaiMPD218Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AkaiMPD218Model.h; sourceTree = "<group>"; };
 		B5CF7B2E1F5F98C000F8AEBC /* recoverysequence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = recoverysequence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CF7B311F5F98C000F8AEBC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B5CF7B321F5F98C000F8AEBC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B5CF7B371F5F98C000F8AEBC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		B5CF7B381F5F98C000F8AEBC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B5CF7B381F5F98C000F8AEBC /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
 		B5CF7B3A1F5F98C000F8AEBC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B5CF7B451F5F999800F8AEBC /* OGLWrapperView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OGLWrapperView.h; sourceTree = "<group>"; };
 		B5CF7B461F5F999800F8AEBC /* OGLWrapperView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = OGLWrapperView.mm; sourceTree = "<group>"; };
@@ -58,6 +64,33 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B59B594A1F64451F0083850D /* cpp */ = {
+			isa = PBXGroup;
+			children = (
+				B59B594F1F64455A0083850D /* model */,
+				B59B594B1F64451F0083850D /* renderer */,
+			);
+			path = cpp;
+			sourceTree = "<group>";
+		};
+		B59B594B1F64451F0083850D /* renderer */ = {
+			isa = PBXGroup;
+			children = (
+				B59B594D1F64451F0083850D /* Renderer.h */,
+				B59B594C1F64451F0083850D /* Renderer.cpp */,
+			);
+			path = renderer;
+			sourceTree = "<group>";
+		};
+		B59B594F1F64455A0083850D /* model */ = {
+			isa = PBXGroup;
+			children = (
+				B59B59511F64455A0083850D /* AkaiMPD218Model.h */,
+				B59B59501F64455A0083850D /* AkaiMPD218Model.cpp */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		B5CF7B251F5F98C000F8AEBC = {
 			isa = PBXGroup;
 			children = (
@@ -86,8 +119,9 @@
 				B5CF7B451F5F999800F8AEBC /* OGLWrapperView.h */,
 				B5CF7B461F5F999800F8AEBC /* OGLWrapperView.mm */,
 				B5CF7B371F5F98C000F8AEBC /* ViewController.h */,
-				B5CF7B381F5F98C000F8AEBC /* ViewController.m */,
+				B5CF7B381F5F98C000F8AEBC /* ViewController.mm */,
 				B5CF7B3A1F5F98C000F8AEBC /* Assets.xcassets */,
+				B59B594A1F64451F0083850D /* cpp */,
 				B5CF7B501F5FBCCB00F8AEBC /* osc */,
 				B5CF7B4B1F5FAA5600F8AEBC /* Supporting */,
 			);
@@ -241,10 +275,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B5CF7B391F5F98C000F8AEBC /* ViewController.m in Sources */,
+				B59B594E1F64451F0083850D /* Renderer.cpp in Sources */,
+				B5CF7B391F5F98C000F8AEBC /* ViewController.mm in Sources */,
 				B5CF7B471F5F999800F8AEBC /* OGLWrapperView.mm in Sources */,
 				B5CF7B4F1F5FAA5600F8AEBC /* main.m in Sources */,
 				B5CF7B331F5F98C000F8AEBC /* AppDelegate.m in Sources */,
+				B59B59521F64455A0083850D /* AkaiMPD218Model.cpp in Sources */,
 				B5CF7B531F5FBD0D00F8AEBC /* RSOSCListener.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

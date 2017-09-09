@@ -10,6 +10,8 @@
 }
 
 @property (nonatomic, assign) CFTimeInterval dt;
+@property (nonatomic, assign) OGLRenderCallback callback;
+@property (nonatomic, assign) void *callbackUserInfo;
 
 @end
 
@@ -40,6 +42,12 @@
   return self;
 }
 
+- (void)setRenderCallback:(OGLRenderCallback)callback userInfo:(void *)userInfo
+{
+  _callback = callback;
+  _callbackUserInfo = userInfo;
+}
+
 - (void)prepareOpenGL
 {
   if ([self lockFocusIfCanDraw]) {
@@ -67,18 +75,12 @@
   if ([self lockFocusIfCanDraw]) {
     [[self openGLContext] makeCurrentContext];
     CGLLockContext([[self openGLContext] CGLContextObj]);
-    
-    // BEN
+
     glClearColor(0, 0, 0, 0);
     glClear(GL_COLOR_BUFFER_BIT);
-    glColor3f(1.0f, 0.85f, 0.35f);
-    glBegin(GL_TRIANGLES);
-    {
-      glVertex3f(0.0, 0.6, 0.0);
-      glVertex3f(-0.2, -0.3, 0.0);
-      glVertex3f(0.2, -0.3 ,0.0);
+    if (_callback) {
+      _callback(_dt, _callbackUserInfo);
     }
-    glEnd();
     glFlush();
     
     [[self openGLContext] flushBuffer];
