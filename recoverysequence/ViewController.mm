@@ -122,7 +122,7 @@
 
 static void oglRenderCallback(double dt, void *userInfo) {
   ViewController *vc = (__bridge ViewController *)userInfo;
-  vc.renderer->render(vc.model);
+  vc.renderer->render(dt, vc.model);
 }
 
 @end

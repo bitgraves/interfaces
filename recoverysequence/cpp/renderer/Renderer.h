@@ -8,11 +8,14 @@
 class Renderer {
 public:
   Renderer();
-  void render(AkaiMPD218Model* model);
+  void render(double dt, AkaiMPD218Model* model);
   void setViewport(float width, float height);
   
 private:
   float _viewportWidth, _viewportHeight;
+  double _time;
+  float _scale;
+  void _renderFancyHexagon(AkaiMPD218Model *model);
   void _renderHexagon(AkaiMPD218Model *model);
   void _renderDebug(AkaiMPD218Model* model);
 };

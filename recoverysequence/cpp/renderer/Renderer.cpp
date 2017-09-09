@@ -6,11 +6,15 @@
 #include <OpenGL/glu.h>
 
 Renderer::Renderer() {
+  _time = 0;
+  _scale = 1;
   this->setViewport(0, 0);
 }
 
-void Renderer::render(AkaiMPD218Model *model) {
-  this->_renderHexagon(model);
+void Renderer::render(double dt, AkaiMPD218Model *model) {
+  _time += dt;
+  _scale = 1.0 + (0.08 * sin(_time * 0.4));
+  this->_renderFancyHexagon(model);
 }
 
 void Renderer::setViewport(float width, float height) {
@@ -42,6 +46,48 @@ void Renderer::_renderHexagon(AkaiMPD218Model *model) {
       glColor4f(1, 1, 1, knobValue);
     }
     glRectf(radius + -halfwidth, -halfwidth, radius + -halfwidth + (knobValue * halfwidth * 2.0), halfwidth);
+    glRotatef(incAngle, 0, 0, 1);
+  }
+  glPopMatrix();
+}
+
+void Renderer::_renderFancyHexagon(AkaiMPD218Model *model) {
+  float incAngle = 360.0 / (float)AkaiMPD218Model::NUM_KNOBS;
+  float radius = 250;
+  float halfwidth = 60;
+  
+  glPushMatrix();
+  glTranslatef(_viewportWidth * 0.5, _viewportHeight * 0.5, 0);
+  glScalef(_scale, _scale, 1);
+  for (int hexIdx = 0; hexIdx < AkaiMPD218Model::NUM_KNOBS; hexIdx++) {
+    int knobIdx = hexIdxToKnobIdx[hexIdx];
+    float knobValue = (float)(model->knobValues[knobIdx]) / 128.0;
+    
+    // render bar indicating value
+    glColor4f(1, 1, 1, 0.1);
+    float barLen = halfwidth * 6.0;
+    // glRectf(radius + -halfwidth, -halfwidth, radius + -halfwidth + barLen, halfwidth);
+    
+    if (knobIdx == model->knobIndexLastUpdated) {
+      glColor4f(1, 0, 0, knobValue);
+    } else {
+      glColor4f(1, 1, 1, knobValue);
+    }
+    glRectf(radius + -halfwidth, -halfwidth, radius + -halfwidth + (knobValue * barLen), halfwidth);
+    
+    // render dividing lines
+    glColor4f(1, 1, 1, 0.5);
+    float lineAngle = ((M_PI * 2.0) / (float)AkaiMPD218Model::NUM_KNOBS) * 0.5;
+    float hexSideLen = 91;
+    float longDistance = 712;
+    glBegin(GL_LINE_STRIP);
+    {
+      glVertex2f(radius - halfwidth - 32, -hexSideLen);
+      glVertex2f(radius - halfwidth - 32, hexSideLen);
+      glVertex2f(longDistance * cosf(lineAngle), longDistance * sinf(lineAngle));
+    }
+    glEnd();
+    
     glRotatef(incAngle, 0, 0, 1);
   }
   glPopMatrix();

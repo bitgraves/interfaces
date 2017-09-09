@@ -45,7 +45,7 @@
   [_vText setTextColor:[NSColor redColor]];
   // CourierNewPS-BoldMT, Menlo-Bold, Menlo-Regular
   //     NSLog(@"%@", [[NSFontManager sharedFontManager] availableFonts]);
-  [_vText setFont:[NSFont fontWithName:@"Menlo-Bold" size:24.0]];
+  [_vText setFont:[NSFont fontWithName:@"Menlo" size:24.0]];
   [self addSubview:_vText];
   
   // add some empty lines
