@@ -51,6 +51,7 @@
   [self.view addSubview:vTextContainer];
   
   _renderer = new Renderer();
+  _renderer->setViewport(self.view.bounds.size.width, self.view.bounds.size.height);
   _model = new AkaiMPD218Model();
   
   [NSEvent addLocalMonitorForEventsMatchingMask:NSEventMaskFlagsChanged handler:^NSEvent * _Nullable(NSEvent * _Nonnull e) {
