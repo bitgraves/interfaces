@@ -2,6 +2,7 @@
 #import "ViewController.h"
 #import "OGLWrapperView.h"
 #import "RSOSCListener.h"
+#import "RSTextContainer.h"
 
 #import "Renderer.h"
 #import "AkaiMPD218Model.h"
@@ -25,6 +26,7 @@
 @property (nonatomic, strong) RSOSCListener *oscListener;
 @property (nonatomic, assign) Renderer *renderer;
 @property (nonatomic, assign) AkaiMPD218Model *model;
+@property (nonatomic, strong) RSTextContainer *vTextContainer;
 
 @end
 
@@ -43,6 +45,10 @@
   OGLWrapperView *oglView = [[OGLWrapperView alloc] initWithFrame:self.view.bounds];
   [oglView setRenderCallback:&oglRenderCallback userInfo:(__bridge void *)self];
   [self.view addSubview:oglView];
+  
+  RSTextContainer *vTextContainer = [[RSTextContainer alloc] initWithFrame:self.view.bounds];
+  _vTextContainer = vTextContainer;
+  [self.view addSubview:vTextContainer];
   
   _renderer = new Renderer();
   _model = new AkaiMPD218Model();
@@ -91,6 +97,7 @@
         int param = [arguments[0] intValue];
         int value = [arguments[1] intValue];
         _model->ingestOscMessage(param, value);
+        [_vTextContainer addTextLine:[NSString stringWithFormat:@"%d %d", param, value]];
         isValid = YES;
       }
     } else if ([addressComponents.firstObject isEqualToString:@"mouse"]) {
@@ -100,6 +107,7 @@
         int dx = [arguments[0] intValue];
         int dy = [arguments[1] intValue];
         _model->ingestDebugMouseMessage(dx, dy);
+        [_vTextContainer addTextLine:[NSString stringWithFormat:@"%d %d", dx, dy]];
         isValid = YES;
       }
     }

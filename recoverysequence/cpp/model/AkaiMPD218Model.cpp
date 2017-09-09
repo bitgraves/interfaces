@@ -34,7 +34,6 @@ void AkaiMPD218Model::ingestDebugMouseMessage(int dx, int dy) {
   _debugMouseY = fmax(0, fmin(128, _debugMouseY));
   
   int knobIndex = _debugMouseX / 100;
-  fprintf(stdout, "set %d to %d\n", knobIndex, _debugMouseY);
   knobValues[knobIndex] = _debugMouseY;
   knobIndexLastUpdated = knobIndex;
 }

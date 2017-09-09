@@ -56,6 +56,9 @@
     
     [[self openGLContext] update];
     
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+    
     CGLUnlockContext([[self openGLContext] CGLContextObj]);
     [self unlockFocus];
   }
@@ -77,7 +80,7 @@
     CGLLockContext([[self openGLContext] CGLContextObj]);
 
     glClearColor(0, 0, 0, 0);
-    glClear(GL_COLOR_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     if (_callback) {
       _callback(_dt, _callbackUserInfo);
     }

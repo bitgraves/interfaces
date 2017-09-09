@@ -10,6 +10,7 @@
 		0B2F8A6DE378A734E10856C1 /* libPods-recoverysequence.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4476CBB6F43F4243D01989D /* libPods-recoverysequence.a */; };
 		B59B594E1F64451F0083850D /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B59B594C1F64451F0083850D /* Renderer.cpp */; };
 		B59B59521F64455A0083850D /* AkaiMPD218Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B59B59501F64455A0083850D /* AkaiMPD218Model.cpp */; };
+		B59B59561F6461F20083850D /* RSTextContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B59B59551F6461F20083850D /* RSTextContainer.m */; };
 		B5CF7B331F5F98C000F8AEBC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5CF7B321F5F98C000F8AEBC /* AppDelegate.m */; };
 		B5CF7B391F5F98C000F8AEBC /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = B5CF7B381F5F98C000F8AEBC /* ViewController.mm */; };
 		B5CF7B3B1F5F98C000F8AEBC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5CF7B3A1F5F98C000F8AEBC /* Assets.xcassets */; };
@@ -24,6 +25,8 @@
 		B59B594D1F64451F0083850D /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
 		B59B59501F64455A0083850D /* AkaiMPD218Model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AkaiMPD218Model.cpp; sourceTree = "<group>"; };
 		B59B59511F64455A0083850D /* AkaiMPD218Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AkaiMPD218Model.h; sourceTree = "<group>"; };
+		B59B59541F6461F20083850D /* RSTextContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTextContainer.h; sourceTree = "<group>"; };
+		B59B59551F6461F20083850D /* RSTextContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTextContainer.m; sourceTree = "<group>"; };
 		B5CF7B2E1F5F98C000F8AEBC /* recoverysequence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = recoverysequence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CF7B311F5F98C000F8AEBC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B5CF7B321F5F98C000F8AEBC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -91,6 +94,15 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		B59B59531F6461CA0083850D /* text */ = {
+			isa = PBXGroup;
+			children = (
+				B59B59541F6461F20083850D /* RSTextContainer.h */,
+				B59B59551F6461F20083850D /* RSTextContainer.m */,
+			);
+			path = text;
+			sourceTree = "<group>";
+		};
 		B5CF7B251F5F98C000F8AEBC = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +135,7 @@
 				B5CF7B3A1F5F98C000F8AEBC /* Assets.xcassets */,
 				B59B594A1F64451F0083850D /* cpp */,
 				B5CF7B501F5FBCCB00F8AEBC /* osc */,
+				B59B59531F6461CA0083850D /* text */,
 				B5CF7B4B1F5FAA5600F8AEBC /* Supporting */,
 			);
 			path = recoverysequence;
@@ -276,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B59B594E1F64451F0083850D /* Renderer.cpp in Sources */,
+				B59B59561F6461F20083850D /* RSTextContainer.m in Sources */,
 				B5CF7B391F5F98C000F8AEBC /* ViewController.mm in Sources */,
 				B5CF7B471F5F999800F8AEBC /* OGLWrapperView.mm in Sources */,
 				B5CF7B4F1F5FAA5600F8AEBC /* main.m in Sources */,
