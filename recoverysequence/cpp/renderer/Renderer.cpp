@@ -11,14 +11,14 @@ void Renderer::render(AkaiMPD218Model *model) {
     float alpha = (float)(model->knobValues[ii]) / 128.0;
     float xi = (totalWidth * -0.5) + (ii * sqSide);
     float s = (sqSide * 0.97);
-    float partialS = 6 * alpha;
+    float partialS = 1 * alpha;
     glColor4f(1, 1, 1, 0.1);
-    glRectf(xi, -3, xi + s, 3);
+    glRectf(xi, -0.5, xi + s, 0.5);
     if (ii == model->knobIndexLastUpdated) {
       glColor4f(1, 0, 0, alpha);
     } else {
       glColor4f(1, 1, 1, alpha);
     }
-    glRectf(xi, -3, xi + s, -3 + partialS);
+    glRectf(xi, -0.5, xi + s, -0.5 + partialS);
   }
 }

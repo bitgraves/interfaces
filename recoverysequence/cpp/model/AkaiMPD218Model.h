@@ -11,6 +11,10 @@ public:
   int knobIndexLastUpdated;
   
   void ingestOscMessage(int param, int value);
+  void ingestDebugMouseMessage(int dx, int dy);
+  
+private:
+  int _debugMouseX, _debugMouseY;
 };
 
 #endif

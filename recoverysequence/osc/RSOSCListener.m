@@ -47,11 +47,9 @@
 
 - (void)_parseMessage:(F53OSCMessage *)message
 {
-  NSString *argsString = @"";
-  if ([message.arguments count]) {
-    argsString = [NSString stringWithFormat:@"(%@)",[message.arguments componentsJoinedByString:@", "]];
+  if (_delegate) {
+    [_delegate oscListener:self didReceiveMessageWithAddress:message.addressParts arguments:message.arguments];
   }
-  NSLog(@"/%@ %@", [message.addressParts componentsJoinedByString:@"/"], argsString);
 }
 
 @end

@@ -20,7 +20,7 @@
 
 @end
 
-@interface ViewController ()
+@interface ViewController () <RSOSCListenerDelegate>
 
 @property (nonatomic, strong) RSOSCListener *oscListener;
 @property (nonatomic, assign) Renderer *renderer;
@@ -57,6 +57,7 @@
   }];
   
   _oscListener = [[RSOSCListener alloc] initWithPort:4242];
+  _oscListener.delegate = self;
   [_oscListener start];
 }
 
@@ -72,10 +73,43 @@
   }
 }
 
+#pragma mark - input listeners
+
 - (void)keyDown:(NSEvent *)event
 {
   NSLog(@"key pressed: %@", event.characters);
 }
+
+- (void)oscListener:(RSOSCListener *)listener didReceiveMessageWithAddress:(NSArray *)addressComponents arguments:(NSArray *)arguments
+{
+  BOOL isValid = NO;
+  if (addressComponents.count) {
+    if ([addressComponents.firstObject isEqualToString:@"param"]) {
+      // direct param from controller
+      // expect /param i i
+      if (arguments.count == 2) {
+        int param = [arguments[0] intValue];
+        int value = [arguments[1] intValue];
+        _model->ingestOscMessage(param, value);
+        isValid = YES;
+      }
+    } else if ([addressComponents.firstObject isEqualToString:@"mouse"]) {
+      // allow debug mouse control
+      // expect /mouse i i
+      if (arguments.count == 2) {
+        int dx = [arguments[0] intValue];
+        int dy = [arguments[1] intValue];
+        _model->ingestDebugMouseMessage(dx, dy);
+        isValid = YES;
+      }
+    }
+  }
+  if (!isValid) {
+    NSLog(@"Unrecognized osc message: /%@ %@", [addressComponents componentsJoinedByString:@"/"], [arguments componentsJoinedByString:@" "]);
+  }
+}
+
+#pragma mark - ogl callback
 
 static void oglRenderCallback(double dt, void *userInfo) {
   ViewController *vc = (__bridge ViewController *)userInfo;
