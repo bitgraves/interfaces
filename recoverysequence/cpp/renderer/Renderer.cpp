@@ -13,7 +13,7 @@ Renderer::Renderer() {
 
 void Renderer::render(double dt, AkaiMPD218Model *model) {
   _time += dt;
-  _scale = 1.0 + (0.08 * sin(_time * 0.4));
+  _scale = 1.0 + (0.05 * sin(_time * 0.4));
   this->_renderFancyHexagon(model);
 }
 
@@ -53,8 +53,7 @@ void Renderer::_renderHexagon(AkaiMPD218Model *model) {
 
 void Renderer::_renderFancyHexagon(AkaiMPD218Model *model) {
   float incAngle = 360.0 / (float)AkaiMPD218Model::NUM_KNOBS;
-  float radius = 250;
-  float halfwidth = 60;
+  float innerRadius = 158;
   
   glPushMatrix();
   glTranslatef(_viewportWidth * 0.5, _viewportHeight * 0.5, 0);
@@ -63,28 +62,20 @@ void Renderer::_renderFancyHexagon(AkaiMPD218Model *model) {
     int knobIdx = hexIdxToKnobIdx[hexIdx];
     float knobValue = (float)(model->knobValues[knobIdx]) / 128.0;
     
-    // render bar indicating value
-    glColor4f(1, 1, 1, 0.1);
-    float barLen = halfwidth * 6.0;
-    // glRectf(radius + -halfwidth, -halfwidth, radius + -halfwidth + barLen, halfwidth);
-    
     if (knobIdx == model->knobIndexLastUpdated) {
       glColor4f(1, 0, 0, knobValue);
     } else {
       glColor4f(1, 1, 1, knobValue);
     }
-    glRectf(radius + -halfwidth, -halfwidth, radius + -halfwidth + (knobValue * barLen), halfwidth);
-    
-    // render dividing lines
-    glColor4f(1, 1, 1, 0.5);
     float lineAngle = ((M_PI * 2.0) / (float)AkaiMPD218Model::NUM_KNOBS) * 0.5;
-    float hexSideLen = 91;
-    float longDistance = 712;
-    glBegin(GL_LINE_STRIP);
+    float hexSideLen = 92;
+    float quadRadius = innerRadius + 800 * knobValue;
+    glBegin(GL_QUADS);
     {
-      glVertex2f(radius - halfwidth - 32, -hexSideLen);
-      glVertex2f(radius - halfwidth - 32, hexSideLen);
-      glVertex2f(longDistance * cosf(lineAngle), longDistance * sinf(lineAngle));
+      glVertex2f(innerRadius, -hexSideLen);
+      glVertex2f(innerRadius, hexSideLen);
+      glVertex2f(quadRadius * cosf(lineAngle), quadRadius * sinf(lineAngle));
+      glVertex2f(quadRadius * cosf(-lineAngle), quadRadius * sinf(-lineAngle));
     }
     glEnd();
     
