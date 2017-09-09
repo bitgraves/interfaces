@@ -93,12 +93,13 @@
   if (addressComponents.count) {
     if ([addressComponents.firstObject isEqualToString:@"param"]) {
       // direct param from controller
-      // expect /param i i
-      if (arguments.count == 2) {
+      // expect /param i i s
+      if (arguments.count == 3) {
         int param = [arguments[0] intValue];
         int value = [arguments[1] intValue];
+        NSString *desc = arguments[2];
         _model->ingestOscMessage(param, value);
-        [_vTextContainer addTextLine:[NSString stringWithFormat:@"%d %d", param, value]];
+        [_vTextContainer addTextLine:[NSString stringWithFormat:@"%d %d %@", param, value, desc]];
         isValid = YES;
       }
     } else if ([addressComponents.firstObject isEqualToString:@"mouse"]) {

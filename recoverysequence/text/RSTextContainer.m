@@ -38,7 +38,7 @@
   self.wantsLayer = YES;
   self.layer.backgroundColor = [NSColor clearColor].CGColor;
   
-  self.vText = [[NSTextView alloc] initWithFrame:NSMakeRect(0, 0, 256, self.frame.size.height)];
+  self.vText = [[NSTextView alloc] initWithFrame:NSMakeRect(0, 0, 512, self.frame.size.height)];
   [_vText setEditable:NO];
   _vText.backgroundColor = [NSColor clearColor];
   [_vText setSelectable:NO];
