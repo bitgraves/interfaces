@@ -15,6 +15,7 @@ void Renderer::render(double dt, AkaiMPD218Model *model) {
   _time += dt;
   _scale = 1.0 + (0.05 * sin(_time * 0.4));
   this->_renderFancyHexagon(model);
+  this->_renderPadGrid(model);
 }
 
 void Renderer::setViewport(float width, float height) {
@@ -43,7 +44,7 @@ void Renderer::_renderHexagon(AkaiMPD218Model *model) {
     if (knobIdx == model->knobIndexLastUpdated) {
       glColor4f(1, 0, 0, knobValue);
     } else {
-      glColor4f(1, 1, 1, knobValue);
+      glColor4f(0.7, 0.7, 0.7, knobValue);
     }
     glRectf(radius + -halfwidth, -halfwidth, radius + -halfwidth + (knobValue * halfwidth * 2.0), halfwidth);
     glRotatef(incAngle, 0, 0, 1);
@@ -68,7 +69,7 @@ void Renderer::_renderFancyHexagon(AkaiMPD218Model *model) {
       glColor4f(1, 1, 1, knobValue);
     }
     float lineAngle = ((M_PI * 2.0) / (float)AkaiMPD218Model::NUM_KNOBS) * 0.5;
-    float hexSideLen = 92;
+    float hexSideLen = 91.5;
     float quadRadius = innerRadius + 800 * knobValue;
     glBegin(GL_QUADS);
     {
@@ -82,6 +83,33 @@ void Renderer::_renderFancyHexagon(AkaiMPD218Model *model) {
     glRotatef(incAngle, 0, 0, 1);
   }
   glPopMatrix();
+}
+
+void Renderer::_renderPadGrid(AkaiMPD218Model *model) {
+  unsigned int sqSpacing = 128;
+  unsigned int sqSide = 100;
+  float gridX = _viewportWidth - 500, gridY = _viewportHeight - 500;
+  int padIdx = 0;
+  
+  for (unsigned int yi = 0; yi < 4; yi++) {
+    for (unsigned int xi = 0; xi < 4; xi++) {
+      if (model->isPadActive[padIdx]) {
+        glBegin(GL_QUADS);
+        glColor4f(1, 0, 0, 0.5);
+      } else {
+        glBegin(GL_LINE_LOOP);
+        glColor4f(1, 1, 1, 0.1);
+      }
+      {
+        glVertex2f(gridX + (xi * sqSpacing), gridY + yi * sqSpacing);
+        glVertex2f(gridX + sqSide + (xi * sqSpacing), gridY + yi * sqSpacing);
+        glVertex2f(gridX + sqSide + (xi * sqSpacing), gridY + sqSide + yi * sqSpacing);
+        glVertex2f(gridX + (xi * sqSpacing), gridY + sqSide + yi * sqSpacing);
+      }
+      glEnd();
+      padIdx++;
+    }
+  }
 }
 
 // renders easily readable version of the model

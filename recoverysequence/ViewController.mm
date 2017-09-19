@@ -85,6 +85,15 @@
 - (void)keyDown:(NSEvent *)event
 {
   NSLog(@"key pressed: %@", event.characters);
+
+  // TODO: put this test code somewhere nice
+  if ([event.characters isEqualToString:@"1"]) {
+    _model->isPadActive[0] = !_model->isPadActive[0];
+  } else if ([event.characters isEqualToString:@"2"]) {
+    _model->isPadActive[1] = !_model->isPadActive[1];
+  } else if ([event.characters isEqualToString:@"3"]) {
+    _model->isPadActive[2] = !_model->isPadActive[2];
+  }
 }
 
 - (void)oscListener:(RSOSCListener *)listener didReceiveMessageWithAddress:(NSArray *)addressComponents arguments:(NSArray *)arguments

@@ -17,6 +17,7 @@ private:
   float _scale;
   void _renderFancyHexagon(AkaiMPD218Model *model);
   void _renderHexagon(AkaiMPD218Model *model);
+  void _renderPadGrid(AkaiMPD218Model *model);
   void _renderDebug(AkaiMPD218Model* model);
 };
 

@@ -10,6 +10,9 @@ AkaiMPD218Model::AkaiMPD218Model() {
   for (unsigned int ii = 0; ii < NUM_KNOBS; ii++) {
     knobValues[ii] = 0;
   }
+  for (unsigned int ii = 0; ii < NUM_PADS; ii++) {
+    isPadActive[ii] = false;
+  }
   _debugMouseX = 0;
   _debugMouseY = 0;
 }

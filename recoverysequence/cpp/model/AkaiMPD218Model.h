@@ -7,8 +7,10 @@ public:
   AkaiMPD218Model();
   
   static const int NUM_KNOBS = 6;
+  static const int NUM_PADS = 16;
   int knobValues[NUM_KNOBS];
   int knobIndexLastUpdated;
+  bool isPadActive[NUM_PADS];
   
   void ingestOscMessage(int param, int value);
   void ingestDebugMouseMessage(int dx, int dy);
