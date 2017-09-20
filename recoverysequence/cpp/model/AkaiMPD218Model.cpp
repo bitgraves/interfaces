@@ -17,16 +17,26 @@ AkaiMPD218Model::AkaiMPD218Model() {
   _debugMouseY = 0;
 }
 
-void AkaiMPD218Model::ingestOscMessage(int param, int value) {
-  int knobIndex = 0;
-  for (unsigned int ii = 0; ii < NUM_KNOBS; ii++) {
-    if (param == paramKnobMapping[ii]) {
-      knobIndex = ii;
+void AkaiMPD218Model::ingestOscMessage(AkaiMPD218ParamType type, int param, int value) {
+  switch (type) {
+    case kAkaiMPD218ParamTypeKnob: {
+      int knobIndex = 0;
+      for (unsigned int ii = 0; ii < NUM_KNOBS; ii++) {
+        if (param == paramKnobMapping[ii]) {
+          knobIndex = ii;
+          break;
+        }
+      }
+      knobValues[knobIndex] = value;
+      knobIndexLastUpdated = knobIndex;
       break;
     }
+    case kAkaiMPD218ParamTypePad:
+      isPadActive[param] = (bool)value;
+      break;
+    default:
+      break;
   }
-  knobValues[knobIndex] = value;
-  knobIndexLastUpdated = knobIndex;
 }
 
 void AkaiMPD218Model::ingestDebugMouseMessage(int dx, int dy) {

@@ -102,12 +102,13 @@
   if (addressComponents.count) {
     if ([addressComponents.firstObject isEqualToString:@"param"]) {
       // direct param from controller
-      // expect /param i i s
-      if (arguments.count == 3) {
-        int param = [arguments[0] intValue];
-        int value = [arguments[1] intValue];
-        NSString *desc = arguments[2];
-        _model->ingestOscMessage(param, value);
+      // expect /param i i i s
+      if (arguments.count == 4) {
+        AkaiMPD218ParamType type = (AkaiMPD218ParamType)[arguments[0] intValue];
+        int param = [arguments[1] intValue];
+        int value = [arguments[2] intValue];
+        NSString *desc = arguments[3];
+        _model->ingestOscMessage(type, param, value);
         [_vTextContainer addTextLine:[NSString stringWithFormat:@"%d %d %@", param, value, desc]];
         isValid = YES;
       }
