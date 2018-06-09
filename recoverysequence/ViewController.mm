@@ -1,6 +1,7 @@
 
 #import "ViewController.h"
 #import "OGLWrapperView.h"
+#import "RSChuckRunner.h"
 #import "RSOSCListener.h"
 #import "RSTextContainer.h"
 
@@ -27,6 +28,7 @@
 @property (nonatomic, assign) Renderer *renderer;
 @property (nonatomic, assign) AkaiMPD218Model *model;
 @property (nonatomic, strong) RSTextContainer *vTextContainer;
+@property (nonatomic, strong) RSChuckRunner *chuckRunner;
 
 @end
 
@@ -63,6 +65,8 @@
     return e;
   }];
   
+  _chuckRunner = [[RSChuckRunner alloc] init];
+  
   _oscListener = [[RSOSCListener alloc] initWithPort:4242];
   _oscListener.delegate = self;
   [_oscListener start];
@@ -84,15 +88,19 @@
 
 - (void)keyDown:(NSEvent *)event
 {
-  NSLog(@"key pressed: %@", event.characters);
+  NSLog(@"key pressed: '%@'", event.characters);
 
   // TODO: put this test code somewhere nice
-  if ([event.characters isEqualToString:@"1"]) {
+  /* if ([event.characters isEqualToString:@"1"]) {
     _model->isPadActive[0] = !_model->isPadActive[0];
-  } else if ([event.characters isEqualToString:@"2"]) {
-    _model->isPadActive[1] = !_model->isPadActive[1];
-  } else if ([event.characters isEqualToString:@"3"]) {
-    _model->isPadActive[2] = !_model->isPadActive[2];
+  } */
+  
+  if ([event.characters isEqualToString:@"1"]) {
+    [_chuckRunner runTestPatch];
+    [_vTextContainer addTextLine:_chuckRunner.status];
+  } else if ([event.characters isEqualToString:@" "]) {
+    [_chuckRunner killAllChuck];
+    [_vTextContainer addTextLine:_chuckRunner.status];
   }
 }
 

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		0B2F8A6DE378A734E10856C1 /* libPods-recoverysequence.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4476CBB6F43F4243D01989D /* libPods-recoverysequence.a */; };
+		B58722BB20CC3DE30052A855 /* Task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B58722BA20CC3DE30052A855 /* Task.cpp */; };
+		B58722BE20CC595C0052A855 /* test.ck in Resources */ = {isa = PBXBuildFile; fileRef = B58722BD20CC595C0052A855 /* test.ck */; };
+		B58722C120CC59810052A855 /* RSChuckRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = B58722C020CC59810052A855 /* RSChuckRunner.mm */; };
 		B59B594E1F64451F0083850D /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B59B594C1F64451F0083850D /* Renderer.cpp */; };
 		B59B59521F64455A0083850D /* AkaiMPD218Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B59B59501F64455A0083850D /* AkaiMPD218Model.cpp */; };
 		B59B59561F6461F20083850D /* RSTextContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = B59B59551F6461F20083850D /* RSTextContainer.m */; };
@@ -21,6 +24,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B58722B920CC3DE30052A855 /* Task.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Task.h; sourceTree = "<group>"; };
+		B58722BA20CC3DE30052A855 /* Task.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Task.cpp; sourceTree = "<group>"; };
+		B58722BD20CC595C0052A855 /* test.ck */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = test.ck; sourceTree = "<group>"; };
+		B58722BF20CC59810052A855 /* RSChuckRunner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RSChuckRunner.h; sourceTree = "<group>"; };
+		B58722C020CC59810052A855 /* RSChuckRunner.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = RSChuckRunner.mm; sourceTree = "<group>"; };
 		B59B594C1F64451F0083850D /* Renderer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
 		B59B594D1F64451F0083850D /* Renderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
 		B59B59501F64455A0083850D /* AkaiMPD218Model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AkaiMPD218Model.cpp; sourceTree = "<group>"; };
@@ -67,11 +75,31 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		B58722B820CC3DE30052A855 /* task */ = {
+			isa = PBXGroup;
+			children = (
+				B58722B920CC3DE30052A855 /* Task.h */,
+				B58722BA20CC3DE30052A855 /* Task.cpp */,
+			);
+			path = task;
+			sourceTree = "<group>";
+		};
+		B58722BC20CC595C0052A855 /* chuck */ = {
+			isa = PBXGroup;
+			children = (
+				B58722BD20CC595C0052A855 /* test.ck */,
+				B58722BF20CC59810052A855 /* RSChuckRunner.h */,
+				B58722C020CC59810052A855 /* RSChuckRunner.mm */,
+			);
+			path = chuck;
+			sourceTree = "<group>";
+		};
 		B59B594A1F64451F0083850D /* cpp */ = {
 			isa = PBXGroup;
 			children = (
 				B59B594F1F64455A0083850D /* model */,
 				B59B594B1F64451F0083850D /* renderer */,
+				B58722B820CC3DE30052A855 /* task */,
 			);
 			path = cpp;
 			sourceTree = "<group>";
@@ -133,6 +161,7 @@
 				B5CF7B371F5F98C000F8AEBC /* ViewController.h */,
 				B5CF7B381F5F98C000F8AEBC /* ViewController.mm */,
 				B5CF7B3A1F5F98C000F8AEBC /* Assets.xcassets */,
+				B58722BC20CC595C0052A855 /* chuck */,
 				B59B594A1F64451F0083850D /* cpp */,
 				B5CF7B501F5FBCCB00F8AEBC /* osc */,
 				B59B59531F6461CA0083850D /* text */,
@@ -230,6 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5CF7B3B1F5F98C000F8AEBC /* Assets.xcassets in Resources */,
+				B58722BE20CC595C0052A855 /* test.ck in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,10 +318,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B58722BB20CC3DE30052A855 /* Task.cpp in Sources */,
 				B59B594E1F64451F0083850D /* Renderer.cpp in Sources */,
 				B59B59561F6461F20083850D /* RSTextContainer.m in Sources */,
 				B5CF7B391F5F98C000F8AEBC /* ViewController.mm in Sources */,
 				B5CF7B471F5F999800F8AEBC /* OGLWrapperView.mm in Sources */,
+				B58722C120CC59810052A855 /* RSChuckRunner.mm in Sources */,
 				B5CF7B4F1F5FAA5600F8AEBC /* main.m in Sources */,
 				B5CF7B331F5F98C000F8AEBC /* AppDelegate.m in Sources */,
 				B59B59521F64455A0083850D /* AkaiMPD218Model.cpp in Sources */,
