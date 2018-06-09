@@ -22,7 +22,7 @@
 
 @end
 
-@interface ViewController () <RSOSCListenerDelegate>
+@interface ViewController () <RSOSCListenerDelegate, RSChuckRunnerDelegate>
 
 @property (nonatomic, strong) RSOSCListener *oscListener;
 @property (nonatomic, assign) Renderer *renderer;
@@ -66,6 +66,7 @@
   }];
   
   _chuckRunner = [[RSChuckRunner alloc] init];
+  _chuckRunner.delegate = self;
   
   _oscListener = [[RSOSCListener alloc] initWithPort:4242];
   _oscListener.delegate = self;
@@ -95,12 +96,11 @@
     _model->isPadActive[0] = !_model->isPadActive[0];
   } */
   
-  if ([event.characters isEqualToString:@"1"]) {
-    [_chuckRunner runTestPatch];
-    [_vTextContainer addTextLine:_chuckRunner.status];
+  NSInteger n = [event.characters integerValue];
+  if (n > 0) {
+    [_chuckRunner runPatchAtIndex:n - 1];
   } else if ([event.characters isEqualToString:@" "]) {
     [_chuckRunner killAllChuck];
-    [_vTextContainer addTextLine:_chuckRunner.status];
   }
 }
 
@@ -134,6 +134,13 @@
   }
   if (!isValid) {
     NSLog(@"Unrecognized osc message: /%@ %@", [addressComponents componentsJoinedByString:@"/"], [arguments componentsJoinedByString:@" "]);
+  }
+}
+
+- (void)chuckRunnerDidUpdateStatus:(RSChuckRunner *)runner
+{
+  if (_chuckRunner.status) {
+    [_vTextContainer addTextLine:_chuckRunner.status];
   }
 }
 
