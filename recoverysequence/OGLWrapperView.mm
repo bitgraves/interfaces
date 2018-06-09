@@ -104,7 +104,13 @@
 - (CVReturn)_getFrameForTime:(const CVTimeStamp*)outputTime
 {
   _dt = 1.0 / (outputTime->rateScalar * (double)outputTime->videoTimeScale / (double)outputTime->videoRefreshPeriod);
-  [self drawRect:[self bounds]];
+  if ([NSThread isMainThread]) {
+    [self drawRect:[self bounds]];
+  } else {
+    dispatch_sync(dispatch_get_main_queue(), ^{
+      [self drawRect:[self bounds]];
+    });
+  }
   
   return kCVReturnSuccess;
 }
