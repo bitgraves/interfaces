@@ -66,7 +66,7 @@ void Renderer::_renderFancyHexagon(AkaiMPD218Model *model) {
     if (knobIdx == model->knobIndexLastUpdated) {
       glColor4f(1, 0, 0, knobValue);
     } else {
-      glColor4f(1, 1, 1, knobValue);
+      glColor4f(0.85, 0.85, 0.85, knobValue);
     }
     float lineAngle = ((M_PI * 2.0) / (float)AkaiMPD218Model::NUM_KNOBS) * 0.5;
     float hexSideLen = 91.5;

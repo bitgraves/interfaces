@@ -10,6 +10,7 @@ typedef enum AkaiMPD218ParamType {
 class AkaiMPD218Model {
 public:
   AkaiMPD218Model();
+  void reset();
   
   static const int NUM_KNOBS = 6;
   static const int NUM_PADS = 16;

@@ -101,6 +101,7 @@
     [_chuckRunner runPatchAtIndex:n - 1];
   } else if ([event.characters isEqualToString:@" "]) {
     [_chuckRunner killAllChuck];
+    _model->reset();
   }
 }
 

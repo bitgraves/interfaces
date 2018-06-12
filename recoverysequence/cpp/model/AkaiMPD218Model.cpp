@@ -7,6 +7,10 @@
 const int paramKnobMapping[] = { 3, 9, 12, 13, 14, 15 };
 
 AkaiMPD218Model::AkaiMPD218Model() {
+  reset();
+}
+
+void AkaiMPD218Model::reset() {
   for (unsigned int ii = 0; ii < NUM_KNOBS; ii++) {
     knobValues[ii] = 0;
   }
