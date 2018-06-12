@@ -8,12 +8,21 @@
 Renderer::Renderer() {
   _time = 0;
   _scale = 1;
+  _flashIntensity = 0;
+  _flashDecay = 0;
   this->setViewport(0, 0);
 }
 
 void Renderer::render(double dt, AkaiMPD218Model *model) {
   _time += dt;
   _scale = 1.0 + (0.05 * sin(_time * 0.4));
+  _flashIntensity *= _flashDecay;
+  if (_flashIntensity > 0) {
+    this->_renderFlash();
+    if (_flashIntensity < 0.001f) {
+      _flashIntensity = 0;
+    }
+  }
   this->_renderFancyHexagon(model);
   this->_renderPadGrid(model);
 }
@@ -21,6 +30,13 @@ void Renderer::render(double dt, AkaiMPD218Model *model) {
 void Renderer::setViewport(float width, float height) {
   _viewportWidth = width;
   _viewportHeight = height;
+}
+
+void Renderer::ingestOscMessage(int param, int val1, int val2) {
+  if (param == 0) {
+    _flashIntensity = (float)val1 / 100.0;
+    _flashDecay = (float)val2 / 100.0;
+  }
 }
 
 #pragma mark - internal
@@ -131,4 +147,9 @@ void Renderer::_renderDebug(AkaiMPD218Model *model) {
     }
     glRectf(xi, -0.75, xi + s, -0.75 + partialS);
   }
+}
+
+void Renderer::_renderFlash() {
+  glColor4f(0, 0, 1, _flashIntensity);
+  glRectf(0, 0, _viewportWidth, _viewportHeight);
 }

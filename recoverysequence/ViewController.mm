@@ -131,6 +131,15 @@
         [_vTextContainer addTextLine:[NSString stringWithFormat:@"%d %d", dx, dy]];
         isValid = YES;
       }
+    } else if ([addressComponents.firstObject isEqualToString:@"render"]) {
+      // render-related chuck message
+      // expect /render i i i
+      if (arguments.count == 3) {
+        int param = [arguments[0] intValue];
+        int val1 = [arguments[1] intValue];
+        int val2 = [arguments[2] intValue];
+        _renderer->ingestOscMessage(param, val1, val2);
+      }
     }
   }
   if (!isValid) {
