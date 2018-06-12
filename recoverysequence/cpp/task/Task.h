@@ -5,13 +5,12 @@
 
 class Task {
 public:
-  Task(const char* command, const char* arg);
+  Task(const char* command);
   ~Task();
   
   int run();
 protected:
   char* _command;
-  char* _arg;
 };
 
 #endif

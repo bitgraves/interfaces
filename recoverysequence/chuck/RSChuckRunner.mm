@@ -27,32 +27,37 @@ NSString * const kCmdKillallPath = @"/usr/bin/killall";
 
 - (void)killAllChuck
 {
-  [self _runCommand:kCmdKillallPath withArg:@"chuck"];
+  [self _runCommand:[NSString stringWithFormat:@"%@ chuck", kCmdKillallPath]];
+  self.status = @"killall chuck";
 }
 
 - (void)runTestPatch
 {
   NSString *patchPath = [NSString stringWithFormat:@"%@/%@", kTestPatchDir, @"test.ck"];
-  [self _runCommand:kCmdChuckPath withArg:patchPath];
+  [self _runChuckWithPatch:patchPath fromDirectory:kTestPatchDir];
 }
 
 - (void)runPatchAtIndex:(NSUInteger)index
 {
   if (index < _patches.count) {
     NSString *patchPath = [NSString stringWithFormat:@"%@/%@.ck", kShowPatchDir, _patches[index]];
-    [self _runCommand:kCmdChuckPath withArg:patchPath];
+    [self _runChuckWithPatch:patchPath fromDirectory:kShowPatchDir];
   }
 }
 
 #pragma mark - internal
 
-- (void)_runCommand:(NSString *)command withArg:(NSString *)arg
+- (void)_runChuckWithPatch:(NSString *)patchPath fromDirectory:(NSString *)workingDirectory
 {
-  Task t([command UTF8String], [arg UTF8String]);
+  // chuck working dir matters for loading resources with relative paths from inside the chuck patch.
+  [self _runCommand:[NSString stringWithFormat:@"cd %@ && %@ --adc:3 --bufsize:1024 %@", workingDirectory, kCmdChuckPath, patchPath]];
+  self.status = [NSString stringWithFormat:@"chuck %@", [patchPath lastPathComponent]];
+}
+
+- (void)_runCommand:(NSString *)command
+{
+  Task t([command UTF8String]);
   t.run();
-  
-  NSString *formattedArg = ([arg rangeOfString:@"/"].location == NSNotFound) ? arg : [arg lastPathComponent];
-  self.status = [NSString stringWithFormat:@"%@ %@", [command lastPathComponent], formattedArg];
 }
 
 - (void)setStatus:(NSString *)status

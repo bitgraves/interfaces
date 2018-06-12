@@ -6,9 +6,8 @@
 
 #include "Task.h"
 
-Task::Task(const char* command, const char* arg) {
+Task::Task(const char* command) {
   _command = strdup(command);
-  _arg = strdup(arg);
 }
 
 Task::~Task() {
@@ -16,17 +15,13 @@ Task::~Task() {
     free(_command);
     _command = NULL;
   }
-  if (_arg) {
-    free(_arg);
-    _arg = NULL;
-  }
 }
 
 int Task::run() {
   pid_t processId;
   if ((processId = fork()) == 0) {
-    char * const argv[] = { _command, _arg, NULL };
-    if (execv(_command, argv) < 0) {
+    char * const argv[] = { "/bin/sh", "-c", _command, NULL };
+    if (execv("/bin/sh", argv) < 0) {
       perror("execv error");
     }
   } else if (processId < 0) {
