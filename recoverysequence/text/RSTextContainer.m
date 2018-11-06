@@ -27,7 +27,7 @@
     [_lines removeObjectAtIndex:0];
   }
   dispatch_async(dispatch_get_main_queue(), ^{
-    _vText.string = [_lines componentsJoinedByString:@"\n"];
+    self->_vText.string = [self->_lines componentsJoinedByString:@"\n"];
   });
 }
 
