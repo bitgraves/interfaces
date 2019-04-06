@@ -20,7 +20,12 @@ Task::~Task() {
 int Task::run() {
   pid_t processId;
   if ((processId = fork()) == 0) {
-    char * const argv[] = { "/bin/sh", "-c", _command, NULL };
+    char * const argv[] = {
+      (char * const)"/bin/sh",
+      (char * const)"-c",
+      _command,
+      NULL
+    };
     if (execv("/bin/sh", argv) < 0) {
       perror("execv error");
     }
