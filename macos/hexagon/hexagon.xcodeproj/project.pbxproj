@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B2F8A6DE378A734E10856C1 /* libPods-recoverysequence.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4476CBB6F43F4243D01989D /* libPods-recoverysequence.a */; };
+		0B2F8A6DE378A734E10856C1 /* libPods-hexagon.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D4476CBB6F43F4243D01989D /* libPods-hexagon.a */; };
 		B58722BB20CC3DE30052A855 /* Task.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B58722BA20CC3DE30052A855 /* Task.cpp */; };
 		B58722BE20CC595C0052A855 /* test.ck in Resources */ = {isa = PBXBuildFile; fileRef = B58722BD20CC595C0052A855 /* test.ck */; };
 		B58722C120CC59810052A855 /* RSChuckRunner.mm in Sources */ = {isa = PBXBuildFile; fileRef = B58722C020CC59810052A855 /* RSChuckRunner.mm */; };
@@ -35,7 +35,7 @@
 		B59B59511F64455A0083850D /* AkaiMPD218Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AkaiMPD218Model.h; sourceTree = "<group>"; };
 		B59B59541F6461F20083850D /* RSTextContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSTextContainer.h; sourceTree = "<group>"; };
 		B59B59551F6461F20083850D /* RSTextContainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSTextContainer.m; sourceTree = "<group>"; };
-		B5CF7B2E1F5F98C000F8AEBC /* recoverysequence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = recoverysequence.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5CF7B2E1F5F98C000F8AEBC /* hexagon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = hexagon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B5CF7B311F5F98C000F8AEBC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B5CF7B321F5F98C000F8AEBC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B5CF7B371F5F98C000F8AEBC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -48,9 +48,9 @@
 		B5CF7B4D1F5FAA5600F8AEBC /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		B5CF7B511F5FBD0D00F8AEBC /* RSOSCListener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSOSCListener.h; sourceTree = "<group>"; };
 		B5CF7B521F5FBD0D00F8AEBC /* RSOSCListener.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSOSCListener.m; sourceTree = "<group>"; };
-		C58292F68C9D49B0C65C5B4B /* Pods-recoverysequence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-recoverysequence.debug.xcconfig"; path = "Pods/Target Support Files/Pods-recoverysequence/Pods-recoverysequence.debug.xcconfig"; sourceTree = "<group>"; };
-		CA321180E1BE5DDD454A605C /* Pods-recoverysequence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-recoverysequence.release.xcconfig"; path = "Pods/Target Support Files/Pods-recoverysequence/Pods-recoverysequence.release.xcconfig"; sourceTree = "<group>"; };
-		D4476CBB6F43F4243D01989D /* libPods-recoverysequence.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-recoverysequence.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C58292F68C9D49B0C65C5B4B /* Pods-hexagon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hexagon.debug.xcconfig"; path = "Pods/Target Support Files/Pods-hexagon/Pods-hexagon.debug.xcconfig"; sourceTree = "<group>"; };
+		CA321180E1BE5DDD454A605C /* Pods-hexagon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-hexagon.release.xcconfig"; path = "Pods/Target Support Files/Pods-hexagon/Pods-hexagon.release.xcconfig"; sourceTree = "<group>"; };
+		D4476CBB6F43F4243D01989D /* libPods-hexagon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-hexagon.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,7 +59,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B5CF7B4A1F5FA4D800F8AEBC /* CoreVideo.framework in Frameworks */,
-				0B2F8A6DE378A734E10856C1 /* libPods-recoverysequence.a in Frameworks */,
+				0B2F8A6DE378A734E10856C1 /* libPods-hexagon.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,8 +69,8 @@
 		7F4DBD639BCB9B70608A43F5 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C58292F68C9D49B0C65C5B4B /* Pods-recoverysequence.debug.xcconfig */,
-				CA321180E1BE5DDD454A605C /* Pods-recoverysequence.release.xcconfig */,
+				C58292F68C9D49B0C65C5B4B /* Pods-hexagon.debug.xcconfig */,
+				CA321180E1BE5DDD454A605C /* Pods-hexagon.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -134,7 +134,7 @@
 		B5CF7B251F5F98C000F8AEBC = {
 			isa = PBXGroup;
 			children = (
-				B5CF7B301F5F98C000F8AEBC /* recoverysequence */,
+				B5CF7B301F5F98C000F8AEBC /* hexagon */,
 				B5CF7B2F1F5F98C000F8AEBC /* Products */,
 				B5CF7B481F5FA4D800F8AEBC /* Frameworks */,
 				7F4DBD639BCB9B70608A43F5 /* Pods */,
@@ -146,12 +146,12 @@
 		B5CF7B2F1F5F98C000F8AEBC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B5CF7B2E1F5F98C000F8AEBC /* recoverysequence.app */,
+				B5CF7B2E1F5F98C000F8AEBC /* hexagon.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		B5CF7B301F5F98C000F8AEBC /* recoverysequence */ = {
+		B5CF7B301F5F98C000F8AEBC /* hexagon */ = {
 			isa = PBXGroup;
 			children = (
 				B5CF7B311F5F98C000F8AEBC /* AppDelegate.h */,
@@ -167,14 +167,14 @@
 				B59B59531F6461CA0083850D /* text */,
 				B5CF7B4B1F5FAA5600F8AEBC /* Supporting */,
 			);
-			path = recoverysequence;
+			path = hexagon;
 			sourceTree = "<group>";
 		};
 		B5CF7B481F5FA4D800F8AEBC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				B5CF7B491F5FA4D800F8AEBC /* CoreVideo.framework */,
-				D4476CBB6F43F4243D01989D /* libPods-recoverysequence.a */,
+				D4476CBB6F43F4243D01989D /* libPods-hexagon.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -200,9 +200,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B5CF7B2D1F5F98C000F8AEBC /* recoverysequence */ = {
+		B5CF7B2D1F5F98C000F8AEBC /* hexagon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B5CF7B421F5F98C000F8AEBC /* Build configuration list for PBXNativeTarget "recoverysequence" */;
+			buildConfigurationList = B5CF7B421F5F98C000F8AEBC /* Build configuration list for PBXNativeTarget "hexagon" */;
 			buildPhases = (
 				B951E130D4F253FC60285425 /* [CP] Check Pods Manifest.lock */,
 				B5CF7B2A1F5F98C000F8AEBC /* Sources */,
@@ -213,9 +213,9 @@
 			);
 			dependencies = (
 			);
-			name = recoverysequence;
-			productName = recoverysequence;
-			productReference = B5CF7B2E1F5F98C000F8AEBC /* recoverysequence.app */;
+			name = hexagon;
+			productName = hexagon;
+			productReference = B5CF7B2E1F5F98C000F8AEBC /* hexagon.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -228,12 +228,12 @@
 				TargetAttributes = {
 					B5CF7B2D1F5F98C000F8AEBC = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 5HCSNU2K62;
+						DevelopmentTeam = 79EBH94J28;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = B5CF7B291F5F98C000F8AEBC /* Build configuration list for PBXProject "recoverysequence" */;
+			buildConfigurationList = B5CF7B291F5F98C000F8AEBC /* Build configuration list for PBXProject "hexagon" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -246,7 +246,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B5CF7B2D1F5F98C000F8AEBC /* recoverysequence */,
+				B5CF7B2D1F5F98C000F8AEBC /* hexagon */,
 			);
 		};
 /* End PBXProject section */
@@ -275,7 +275,7 @@
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-recoverysequence-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-hexagon-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -412,28 +412,28 @@
 		};
 		B5CF7B431F5F98C000F8AEBC /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C58292F68C9D49B0C65C5B4B /* Pods-recoverysequence.debug.xcconfig */;
+			baseConfigurationReference = C58292F68C9D49B0C65C5B4B /* Pods-hexagon.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 5HCSNU2K62;
-				INFOPLIST_FILE = "$(SRCROOT)/recoverysequence/Supporting/Info.plist";
+				DEVELOPMENT_TEAM = 79EBH94J28;
+				INFOPLIST_FILE = "$(SRCROOT)/hexagon/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.terribleben.recoverysequence;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitgraves.hexagon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		B5CF7B441F5F98C000F8AEBC /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CA321180E1BE5DDD454A605C /* Pods-recoverysequence.release.xcconfig */;
+			baseConfigurationReference = CA321180E1BE5DDD454A605C /* Pods-hexagon.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_TEAM = 5HCSNU2K62;
-				INFOPLIST_FILE = "$(SRCROOT)/recoverysequence/Supporting/Info.plist";
+				DEVELOPMENT_TEAM = 79EBH94J28;
+				INFOPLIST_FILE = "$(SRCROOT)/hexagon/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.terribleben.recoverysequence;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bitgraves.hexagon;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -441,7 +441,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B5CF7B291F5F98C000F8AEBC /* Build configuration list for PBXProject "recoverysequence" */ = {
+		B5CF7B291F5F98C000F8AEBC /* Build configuration list for PBXProject "hexagon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B5CF7B401F5F98C000F8AEBC /* Debug */,
@@ -450,7 +450,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B5CF7B421F5F98C000F8AEBC /* Build configuration list for PBXNativeTarget "recoverysequence" */ = {
+		B5CF7B421F5F98C000F8AEBC /* Build configuration list for PBXNativeTarget "hexagon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B5CF7B431F5F98C000F8AEBC /* Debug */,

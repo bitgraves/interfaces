@@ -17,7 +17,6 @@
 		25F3639877B1BF31DB3652CB6E836253 /* F53OSCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = EA1EBE01429CB0A361F9F4D62D486289 /* F53OSCClient.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		2AE25B188237E854A54383B103355184 /* GCDAsyncUdpSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = BB8A7129DE8E7B65912F7FCA2543CABD /* GCDAsyncUdpSocket.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2DED49667EEBA7CF8556822ACF3645DE /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1374268D1BAF7B0E2D566089672954AC /* GCDAsyncSocket.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		3292F7E3337AB34D3187597185282231 /* Pods-recoverysequence-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F17DD7132340616807D32340BBDE40F /* Pods-recoverysequence-dummy.m */; };
 		385BF07054932678D582F25FFFBA28B5 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E1F436A4FBE1F623A88813FDE2BDC2 /* Cocoa.framework */; };
 		3C1FB070B7CFA0AE6CB74E867B7D4A2E /* F53OSC-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74A3D324992E8E5F0E5FA2D97DDDDF2A /* F53OSC-dummy.m */; };
 		454E18C095674FF9C53F71D5E2F213F6 /* F53OSCPacket.h in Headers */ = {isa = PBXBuildFile; fileRef = 85DE482C23257054FD6CE8887E49EBF0 /* F53OSCPacket.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -31,15 +30,16 @@
 		7A9E7E1CBA676F190D437C614AFA8EE1 /* NSDate+F53OSCTimeTag.h in Headers */ = {isa = PBXBuildFile; fileRef = 19004EDDC3F4EEE6E2AD5AEB7D23EFD7 /* NSDate+F53OSCTimeTag.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		7E9E232F3A5DC2EF361794E1ADCBA15C /* F53OSCParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C7A8FAE8350A6EE463DAEF57260F1E /* F53OSCParser.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		864C3D9938529E9A45A683E4AA3BBF7D /* NSData+F53OSCBlob.m in Sources */ = {isa = PBXBuildFile; fileRef = 307531915F416ED8B430A621418E7317 /* NSData+F53OSCBlob.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		89223FB415900E33E679DE1CE93AE739 /* Pods-hexagon-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DAE671155997534BC0CE89111625EF38 /* Pods-hexagon-dummy.m */; };
 		9DEEE5DE96B321E43B794F74A5C045C7 /* NSString+F53OSCString.m in Sources */ = {isa = PBXBuildFile; fileRef = BE58F074EEA8384CF20BC786B01E1B94 /* NSString+F53OSCString.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		9FBDA640CD8DB8B242F22A01CC3A7DE4 /* NSDate+F53OSCTimeTag.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8963E05EBFEFF721EE66B1E628AD69 /* NSDate+F53OSCTimeTag.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		A29BC51315C3972A883EAC69C9CA1DBE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C49151781F1505D09CB141DDA198F537 /* Security.framework */; };
+		ABBD7213C06D441F919CE3F447689CED /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E1F436A4FBE1F623A88813FDE2BDC2 /* Cocoa.framework */; };
 		B135E3A1C9BA4B85ED84B75069EC7470 /* NSData+F53OSCBlob.h in Headers */ = {isa = PBXBuildFile; fileRef = D27714BF7A0BEB0A2CFACF88E28FF907 /* NSData+F53OSCBlob.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B67162DBAB41ABB4AAD4E3CF36663151 /* F53OSCSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = F8DA999CCC5E8E8A608F48FA882ABEA9 /* F53OSCSocket.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		B9B1173BAC32F1D2C4A45E8779E8FFF3 /* NSString+F53OSCString.h in Headers */ = {isa = PBXBuildFile; fileRef = BC19AD2BA93EE05920F4A4872412D036 /* NSString+F53OSCString.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BCD21B609C61086814679138BDD1EC54 /* F53OSCTimeTag.h in Headers */ = {isa = PBXBuildFile; fileRef = A5FC524347A86E6DF34A78E60FA22A5C /* F53OSCTimeTag.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		BD949E75772ECAEACA57105AD34BBBA2 /* F53OSC.h in Headers */ = {isa = PBXBuildFile; fileRef = C5FB2D25C88F77982573F186D54B831D /* F53OSC.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		C2DD3094770C18C63C8674376D8D7D3F /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8E1F436A4FBE1F623A88813FDE2BDC2 /* Cocoa.framework */; };
 		E3C9327C0F7D53F291DBBA1E27098F61 /* F53OSCSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 172EDCA0944B735A402265166053E858 /* F53OSCSocket.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FB628EFE219B7B2989BE82A99AC0562A /* F53OSCServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 20FFC1221F0DD5E2F9A3618FDC656740 /* F53OSCServer.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
 		FEFE0B006CA73EA04506959FE9F27F4E /* NSNumber+F53OSCNumber.h in Headers */ = {isa = PBXBuildFile; fileRef = 85DDA68F548007EB7E95177EC9D308C0 /* NSNumber+F53OSCNumber.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -47,7 +47,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		29285B4716BC6AF92D9DB0F53A35CF49 /* PBXContainerItemProxy */ = {
+		D0A5EB560462A7D23DBF3995A1147D32 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -57,19 +57,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		085197886F767E00CBF4A08843083234 /* libF53OSC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libF53OSC.a; path = libF53OSC.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		096F9BE17F18DEFB3D4F83DDCFA1661D /* Pods-hexagon-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-hexagon-acknowledgements.markdown"; sourceTree = "<group>"; };
 		1374268D1BAF7B0E2D566089672954AC /* GCDAsyncSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
 		172EDCA0944B735A402265166053E858 /* F53OSCSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = F53OSCSocket.m; sourceTree = "<group>"; };
 		19004EDDC3F4EEE6E2AD5AEB7D23EFD7 /* NSDate+F53OSCTimeTag.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSDate+F53OSCTimeTag.h"; sourceTree = "<group>"; };
-		1F17DD7132340616807D32340BBDE40F /* Pods-recoverysequence-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-recoverysequence-dummy.m"; sourceTree = "<group>"; };
 		20FFC1221F0DD5E2F9A3618FDC656740 /* F53OSCServer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = F53OSCServer.m; sourceTree = "<group>"; };
 		307531915F416ED8B430A621418E7317 /* NSData+F53OSCBlob.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSData+F53OSCBlob.m"; sourceTree = "<group>"; };
+		32CCA808D7D3CFE3F7BE6F8B91045F98 /* Pods-hexagon.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hexagon.debug.xcconfig"; sourceTree = "<group>"; };
 		46C7A8FAE8350A6EE463DAEF57260F1E /* F53OSCParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = F53OSCParser.m; sourceTree = "<group>"; };
 		5CE6FAB82C9C581CFCC3FCE773C87C82 /* F53OSCClient.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = F53OSCClient.h; sourceTree = "<group>"; };
-		5DEA46A37E0A4159D862030930C25BD6 /* libPods-recoverysequence.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-recoverysequence.a"; path = "libPods-recoverysequence.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61D23933EBFFAB477D179F9D52E4019D /* F53OSC.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = F53OSC.xcconfig; sourceTree = "<group>"; };
-		624ABBA1E775D77574093DAD3309A7E6 /* Pods-recoverysequence-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-recoverysequence-resources.sh"; sourceTree = "<group>"; };
+		62668607B027ACBF8153D174EC4A7166 /* Pods-hexagon.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-hexagon.release.xcconfig"; sourceTree = "<group>"; };
+		6BC7C1F1AA73FC88CF2055B7971C8AB7 /* libF53OSC.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libF53OSC.a; path = libF53OSC.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		74A3D324992E8E5F0E5FA2D97DDDDF2A /* F53OSC-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "F53OSC-dummy.m"; sourceTree = "<group>"; };
+		75D3C1365DF46DF083E1678CACA2073D /* libPods-hexagon.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-hexagon.a"; path = "libPods-hexagon.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BC35FF68DFEA6F2BAA7F324C4B680C7 /* NSNumber+F53OSCNumber.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+F53OSCNumber.m"; sourceTree = "<group>"; };
 		7BE35B642663A960FC2F24B832113058 /* F53OSCBundle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = F53OSCBundle.h; sourceTree = "<group>"; };
 		7F76243279AA1BC64F4D15A64C596400 /* F53OSCServer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = F53OSCServer.h; sourceTree = "<group>"; };
@@ -77,32 +78,31 @@
 		85DDA68F548007EB7E95177EC9D308C0 /* NSNumber+F53OSCNumber.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSNumber+F53OSCNumber.h"; sourceTree = "<group>"; };
 		85DE482C23257054FD6CE8887E49EBF0 /* F53OSCPacket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = F53OSCPacket.h; sourceTree = "<group>"; };
 		878805AB07FE90D812B6328F33AAB4FA /* GCDAsyncSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
-		8B778EC7494AAB16DE3146D42D660A17 /* Pods-recoverysequence.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-recoverysequence.release.xcconfig"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		944A2D66637A93B7D8F700DB74A57CB0 /* F53OSCMessage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = F53OSCMessage.h; sourceTree = "<group>"; };
 		9D178E636B39725CBBD01D214738390B /* F53OSCParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = F53OSCParser.h; sourceTree = "<group>"; };
-		A4286358AA3ECBC75753EA1E4C74B19F /* Pods-recoverysequence-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-recoverysequence-acknowledgements.plist"; sourceTree = "<group>"; };
 		A4D6DDDC98FE54C876DE7D2D18506A54 /* F53OSCTimeTag.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = F53OSCTimeTag.m; sourceTree = "<group>"; };
 		A5FC524347A86E6DF34A78E60FA22A5C /* F53OSCTimeTag.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = F53OSCTimeTag.h; sourceTree = "<group>"; };
+		B2F4B7047DC2E6373EFFFA9DBCE9A811 /* Pods-hexagon-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-hexagon-frameworks.sh"; sourceTree = "<group>"; };
+		B76B4016A41B762AB8CEA90E9F289109 /* Pods-hexagon-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-hexagon-resources.sh"; sourceTree = "<group>"; };
 		B9DB348FD6BEB8F95CF13A4A372F2B69 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		BB8A7129DE8E7B65912F7FCA2543CABD /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
 		BC19AD2BA93EE05920F4A4872412D036 /* NSString+F53OSCString.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSString+F53OSCString.h"; sourceTree = "<group>"; };
 		BD8963E05EBFEFF721EE66B1E628AD69 /* NSDate+F53OSCTimeTag.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSDate+F53OSCTimeTag.m"; sourceTree = "<group>"; };
 		BE58F074EEA8384CF20BC786B01E1B94 /* NSString+F53OSCString.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "NSString+F53OSCString.m"; sourceTree = "<group>"; };
+		C16D026F5A55F2158FA893D7D44ABD22 /* Pods-hexagon-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-hexagon-acknowledgements.plist"; sourceTree = "<group>"; };
 		C32E72F6F0BD83BA64C1A43C41210A95 /* F53OSCFoundationAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = F53OSCFoundationAdditions.h; sourceTree = "<group>"; };
 		C49151781F1505D09CB141DDA198F537 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
-		C59DF0CB29B0A69DE5FD4C16DA8A2D5A /* Pods-recoverysequence-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-recoverysequence-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C5FB2D25C88F77982573F186D54B831D /* F53OSC.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = F53OSC.h; sourceTree = "<group>"; };
 		CB806B43259BF9BD8718201F998A4B57 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/CFNetwork.framework; sourceTree = DEVELOPER_DIR; };
 		CBD3E6C37A35BAD8EB10908AFDAEF4E3 /* F53OSCBundle.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = F53OSCBundle.m; sourceTree = "<group>"; };
 		D27714BF7A0BEB0A2CFACF88E28FF907 /* NSData+F53OSCBlob.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "NSData+F53OSCBlob.h"; sourceTree = "<group>"; };
 		D8E1F436A4FBE1F623A88813FDE2BDC2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		DAE671155997534BC0CE89111625EF38 /* Pods-hexagon-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-hexagon-dummy.m"; sourceTree = "<group>"; };
 		DC58E83E7C41C2FB5A14E15C349C7294 /* F53OSC-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "F53OSC-prefix.pch"; sourceTree = "<group>"; };
 		E93CA0A387AE2D6D7D40735009F65165 /* F53OSCMessage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = F53OSCMessage.m; sourceTree = "<group>"; };
 		EA1EBE01429CB0A361F9F4D62D486289 /* F53OSCClient.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = F53OSCClient.m; sourceTree = "<group>"; };
 		EFC77479BDC3109BB5A4E0F00EA6F1A7 /* F53OSCProtocols.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = F53OSCProtocols.h; sourceTree = "<group>"; };
-		F1586E1CC452D8B8D7924B5F64F9CDEE /* Pods-recoverysequence.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-recoverysequence.debug.xcconfig"; sourceTree = "<group>"; };
-		F7701ED2CCCB321666C9BF808E5DFC8D /* Pods-recoverysequence-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-recoverysequence-frameworks.sh"; sourceTree = "<group>"; };
 		F8DA999CCC5E8E8A608F48FA882ABEA9 /* F53OSCSocket.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = F53OSCSocket.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,24 +117,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3403300729CE0DEF21079D9E58E49A3F /* Frameworks */ = {
+		463A26ED1EE01E4B7D9173D7FC3D5A8B /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2DD3094770C18C63C8674376D8D7D3F /* Cocoa.framework in Frameworks */,
+				ABBD7213C06D441F919CE3F447689CED /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08C88F46BB01EADBCD4C21824C1A242B /* Products */ = {
+		154B471DF1F52B5F998613B33642B676 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				085197886F767E00CBF4A08843083234 /* libF53OSC.a */,
-				5DEA46A37E0A4159D862030930C25BD6 /* libPods-recoverysequence.a */,
+				2FAC59E59D7806DDDD53928FB0B7BD6A /* Pods-hexagon */,
 			);
-			name = Products;
+			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
 		2604F5849D1D6BD166A2442A1DBB55DD /* Pods */ = {
@@ -145,12 +144,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		26E77E0B4A40C6831B6E9DAF0C544D01 /* Targets Support Files */ = {
+		2FAC59E59D7806DDDD53928FB0B7BD6A /* Pods-hexagon */ = {
 			isa = PBXGroup;
 			children = (
-				897AE7FB6EF856A0BB64697014FB3599 /* Pods-recoverysequence */,
+				096F9BE17F18DEFB3D4F83DDCFA1661D /* Pods-hexagon-acknowledgements.markdown */,
+				C16D026F5A55F2158FA893D7D44ABD22 /* Pods-hexagon-acknowledgements.plist */,
+				DAE671155997534BC0CE89111625EF38 /* Pods-hexagon-dummy.m */,
+				B2F4B7047DC2E6373EFFFA9DBCE9A811 /* Pods-hexagon-frameworks.sh */,
+				B76B4016A41B762AB8CEA90E9F289109 /* Pods-hexagon-resources.sh */,
+				32CCA808D7D3CFE3F7BE6F8B91045F98 /* Pods-hexagon.debug.xcconfig */,
+				62668607B027ACBF8153D174EC4A7166 /* Pods-hexagon.release.xcconfig */,
 			);
-			name = "Targets Support Files";
+			name = "Pods-hexagon";
+			path = "Target Support Files/Pods-hexagon";
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -159,24 +165,9 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				96D996393384F21972E2DD81788EE22C /* Frameworks */,
 				2604F5849D1D6BD166A2442A1DBB55DD /* Pods */,
-				08C88F46BB01EADBCD4C21824C1A242B /* Products */,
-				26E77E0B4A40C6831B6E9DAF0C544D01 /* Targets Support Files */,
+				DF07F2B612661778CD2FA4F0E0239D88 /* Products */,
+				154B471DF1F52B5F998613B33642B676 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		897AE7FB6EF856A0BB64697014FB3599 /* Pods-recoverysequence */ = {
-			isa = PBXGroup;
-			children = (
-				C59DF0CB29B0A69DE5FD4C16DA8A2D5A /* Pods-recoverysequence-acknowledgements.markdown */,
-				A4286358AA3ECBC75753EA1E4C74B19F /* Pods-recoverysequence-acknowledgements.plist */,
-				1F17DD7132340616807D32340BBDE40F /* Pods-recoverysequence-dummy.m */,
-				F7701ED2CCCB321666C9BF808E5DFC8D /* Pods-recoverysequence-frameworks.sh */,
-				624ABBA1E775D77574093DAD3309A7E6 /* Pods-recoverysequence-resources.sh */,
-				F1586E1CC452D8B8D7924B5F64F9CDEE /* Pods-recoverysequence.debug.xcconfig */,
-				8B778EC7494AAB16DE3146D42D660A17 /* Pods-recoverysequence.release.xcconfig */,
-			);
-			name = "Pods-recoverysequence";
-			path = "Target Support Files/Pods-recoverysequence";
 			sourceTree = "<group>";
 		};
 		96D996393384F21972E2DD81788EE22C /* Frameworks */ = {
@@ -238,6 +229,15 @@
 			path = F53OSC;
 			sourceTree = "<group>";
 		};
+		DF07F2B612661778CD2FA4F0E0239D88 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6BC7C1F1AA73FC88CF2055B7971C8AB7 /* libF53OSC.a */,
+				75D3C1365DF46DF083E1678CACA2073D /* libPods-hexagon.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		E91EB385E52DF0CF35245A5F1E0AFEDA /* OS X */ = {
 			isa = PBXGroup;
 			children = (
@@ -292,24 +292,24 @@
 			);
 			name = F53OSC;
 			productName = F53OSC;
-			productReference = 085197886F767E00CBF4A08843083234 /* libF53OSC.a */;
+			productReference = 6BC7C1F1AA73FC88CF2055B7971C8AB7 /* libF53OSC.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		F5B57FC6737D37E4BE210EBEDEE77AF5 /* Pods-recoverysequence */ = {
+		D9145F7200B5FEACC3C5C11F5AEDAFDB /* Pods-hexagon */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 957366870669E66263140EC027D28319 /* Build configuration list for PBXNativeTarget "Pods-recoverysequence" */;
+			buildConfigurationList = CC9B7609823C9C980B39687FE0D80A93 /* Build configuration list for PBXNativeTarget "Pods-hexagon" */;
 			buildPhases = (
-				7D50DC4F6ABE800A3D1877DEBC0BEAAB /* Sources */,
-				3403300729CE0DEF21079D9E58E49A3F /* Frameworks */,
+				9413F0ED6419C6F5A53753CF5BA52D4C /* Sources */,
+				463A26ED1EE01E4B7D9173D7FC3D5A8B /* Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				E426D2C7FD6FF1E050504BF3F0265DEE /* PBXTargetDependency */,
+				7D5689F30C9C38EEB73F9A2BAA5D2C55 /* PBXTargetDependency */,
 			);
-			name = "Pods-recoverysequence";
-			productName = "Pods-recoverysequence";
-			productReference = 5DEA46A37E0A4159D862030930C25BD6 /* libPods-recoverysequence.a */;
+			name = "Pods-hexagon";
+			productName = "Pods-hexagon";
+			productReference = 75D3C1365DF46DF083E1678CACA2073D /* libPods-hexagon.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -329,25 +329,17 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 08C88F46BB01EADBCD4C21824C1A242B /* Products */;
+			productRefGroup = DF07F2B612661778CD2FA4F0E0239D88 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				9EB07E24AB6B33FCD68484546D60D2EB /* F53OSC */,
-				F5B57FC6737D37E4BE210EBEDEE77AF5 /* Pods-recoverysequence */,
+				D9145F7200B5FEACC3C5C11F5AEDAFDB /* Pods-hexagon */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		7D50DC4F6ABE800A3D1877DEBC0BEAAB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3292F7E3337AB34D3187597185282231 /* Pods-recoverysequence-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		8F254DDAD51EDA2DFED5F6441BBCA196 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -370,18 +362,47 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		9413F0ED6419C6F5A53753CF5BA52D4C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89223FB415900E33E679DE1CE93AE739 /* Pods-hexagon-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		E426D2C7FD6FF1E050504BF3F0265DEE /* PBXTargetDependency */ = {
+		7D5689F30C9C38EEB73F9A2BAA5D2C55 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = F53OSC;
 			target = 9EB07E24AB6B33FCD68484546D60D2EB /* F53OSC */;
-			targetProxy = 29285B4716BC6AF92D9DB0F53A35CF49 /* PBXContainerItemProxy */;
+			targetProxy = D0A5EB560462A7D23DBF3995A1147D32 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		08A7A40232D81BBB8092ECFC0F0C0E6A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32CCA808D7D3CFE3F7BE6F8B91045F98 /* Pods-hexagon.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				EXECUTABLE_PREFIX = lib;
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
 		43EAB4A3DC48F1A44D9B9B800FB0BFE0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 61D23933EBFFAB477D179F9D52E4019D /* F53OSC.xcconfig */;
@@ -549,9 +570,9 @@
 			};
 			name = Release;
 		};
-		D6C898177D2B9B437101AAD4D2E15753 /* Release */ = {
+		BDD55AAB38017D75B77DCA87917C96A1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B778EC7494AAB16DE3146D42D660A17 /* Pods-recoverysequence.release.xcconfig */;
+			baseConfigurationReference = 62668607B027ACBF8153D174EC4A7166 /* Pods-hexagon.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "-";
@@ -569,27 +590,6 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
-		};
-		FF3E5384D5EF9BDB15AE3EBF6B63F818 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F1586E1CC452D8B8D7924B5F64F9CDEE /* Pods-recoverysequence.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "-";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				EXECUTABLE_PREFIX = lib;
-				MACH_O_TYPE = staticlib;
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
@@ -612,11 +612,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		957366870669E66263140EC027D28319 /* Build configuration list for PBXNativeTarget "Pods-recoverysequence" */ = {
+		CC9B7609823C9C980B39687FE0D80A93 /* Build configuration list for PBXNativeTarget "Pods-hexagon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FF3E5384D5EF9BDB15AE3EBF6B63F818 /* Debug */,
-				D6C898177D2B9B437101AAD4D2E15753 /* Release */,
+				08A7A40232D81BBB8092ECFC0F0C0E6A /* Debug */,
+				BDD55AAB38017D75B77DCA87917C96A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
