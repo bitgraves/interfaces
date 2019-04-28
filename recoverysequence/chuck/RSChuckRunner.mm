@@ -4,7 +4,7 @@
 
 // TODO: move to plist
 NSString * const kTestPatchDir = @"/Users/ben/Documents/code/bitgraves/recoverysequence/recoverysequence/chuck";
-NSString * const kShowPatchDir = @"/Users/ben/Documents/audio/chuck/bitgraves/show/nov2018";
+NSString * const kShowPatchDir = @"/Users/ben/Documents/audio/chuck/bitgraves/show/apr2019";
 NSString * const kCmdChuckPath = @"/usr/local/bin/chuck";
 NSString * const kCmdKillallPath = @"/usr/bin/killall";
 
@@ -20,7 +20,7 @@ NSString * const kCmdKillallPath = @"/usr/bin/killall";
 - (instancetype)init
 {
   if (self = [super init]) {
-    _patches = @[@"01", @"02", @"03", @"04"];
+    _patches = @[@"flash", @"echo", @"interlude", @"linda"];
   }
   return self;
 }
