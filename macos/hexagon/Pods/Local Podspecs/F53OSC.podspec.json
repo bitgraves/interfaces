@@ -1,0 +1,33 @@
+{
+  "name": "F53OSC",
+  "version": "1.0.2",
+  "summary": "A nice open source OSC library for Objective-C.",
+  "description": "* Hey neat, it's a nice open source OSC library for Objective-C.\n\n* From your friends at Figure 53.\n\n* For convenience, we've included a few public domain source files from CocoaAsyncSocket. But appropriate thanks, kudos, and curiosity about that code should be directed to the source.",
+  "authors": "Figure 53, LLC",
+  "homepage": "http://figure53.com/code/",
+  "license": {
+    "type": "BSD-like",
+    "file": "LICENSE.txt"
+  },
+  "social_media_url": "https://twitter.com/figure53",
+  "platforms": {
+    "ios": "7.0",
+    "osx": "10.9"
+  },
+  "source": {
+    "git": "https://github.com/Figure53/F53OSC.git",
+    "tag": "v1.0.2"
+  },
+  "source_files": "*.{h,m}",
+  "requires_arc": true,
+  "ios": {
+    "exclude_files": "F53OSC Monitor/*"
+  },
+  "tvos": {
+    "exclude_files": "F53OSC Monitor/*"
+  },
+  "frameworks": [
+    "Security",
+    "CFNetwork"
+  ]
+}

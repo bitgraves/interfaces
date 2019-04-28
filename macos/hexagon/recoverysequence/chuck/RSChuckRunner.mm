@@ -3,7 +3,7 @@
 #import "Task.h"
 
 // TODO: move to plist
-NSString * const kTestPatchDir = @"/Users/ben/Documents/code/bitgraves/recoverysequence/recoverysequence/chuck";
+NSString * const kTestPatchDir = @"/Users/ben/Documents/bitgraves/interfaces/macos/hexagon/recoverysequence/chuck";
 NSString * const kShowPatchDir = @"/Users/ben/Documents/audio/chuck/bitgraves/show/apr2019";
 NSString * const kCmdChuckPath = @"/usr/local/bin/chuck";
 NSString * const kCmdKillallPath = @"/usr/bin/killall";
